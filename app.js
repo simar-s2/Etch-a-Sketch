@@ -26,4 +26,14 @@ clearbtn.addEventListener('click', () => {
     pixels.forEach((div) => div.style.backgroundColor = '#000')
 })
 
+function resetGrid() {
+    let pixels = grid.querySelectorAll('div');
+    pixels.forEach((div) => div.remove());
+}
+
+function changeSize (input) {
+    resetGrid();
+    createGrid(input);
+}
+
 createGrid(16);

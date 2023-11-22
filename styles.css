@@ -5,6 +5,17 @@
     justify-content: center;
 }
 
+.buttons {
+    margin: 2rem;
+}
+
+.buttons > button {
+    font-size: 2rem;
+    border-radius: 12px;
+}
+
+.
+
 .grid {
     display: grid;
     justify-content: center;
@@ -14,3 +25,5 @@
     border: 2px solid black;
     margin: 2rem;
 }
+
+.
