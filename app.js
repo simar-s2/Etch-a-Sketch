@@ -1,6 +1,7 @@
 // HTML elements selction and variables
 const grid = document.querySelector('.grid');
 const clearbtn = document.querySelector('.clearbtn');
+const eraserbtn = document.querySelector('.eraserbtn')
 const form = document.querySelector('.resizeform');
 const colorbtn = document.querySelector('.colorbtn')
 const rainbowbtn = document.querySelector('.rainbowbtn');
@@ -20,24 +21,30 @@ function createGrid (size) {
         pixel.style.height = `${pixelHeight}px`;
         grid.appendChild(pixel);
 
-        //different mode event listeners
+        // Different mode event listeners
         colorbtn.addEventListener('click', () => {
             mode = 'default';
         })
         rainbowbtn.addEventListener('click', () => {
             mode = 'rainbow';
         })
+        eraserbtn.addEventListener('click', () => {
+            mode = 'eraser'
+        })
 
-        //changing color of a pixel depending on the mode
+        // Changing color of a pixel depending on the mode
         pixel.addEventListener('mouseover', () => {
-            if(mode == 'default') {
+            if(mode === 'default') {
                 pixel.style.backgroundColor = '#333';
             }
-            else if (mode == 'rainbow'){
+            else if (mode === 'rainbow'){
                 red = Math.floor(Math.random() * 256 );
                 green = Math.floor(Math.random() * 256 );
                 blue = Math.floor(Math.random() * 256 );
                 pixel.style.backgroundColor = `rgb(${red},${green},${blue})`;
+            }
+            else if (mode === 'eraser') {
+                pixel.style.backgroundColor = DefaultColor;
             }
         })
     }
