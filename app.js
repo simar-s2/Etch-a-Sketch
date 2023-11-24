@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
 const clearbtn = document.querySelector('.clearbtn');
 const form = document.querySelector('.resizeform')
+const DefaultColor = '#fff';
 
 function createGrid (size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -11,19 +12,19 @@ function createGrid (size) {
         pixel.classList.add("pixel")
         // let pixels = grid.querySelectorAll('div');
         // pixels.forEach((div) => div.remove());
-        pixel.style.backgroundColor = '#000';
-        pixelHeight = 700 / size;
+        pixel.style.backgroundColor = DefaultColor;
+        pixelHeight = 500 / size;
         pixel.style.height = `${pixelHeight}px`;
         grid.appendChild(pixel);
         pixel.addEventListener('mouseover', () => {
-            pixel.style.backgroundColor = '#fff';
+            pixel.style.backgroundColor = '#333';
         })
     }
 }
 
 clearbtn.addEventListener('click', () => {
     let pixels = grid.querySelectorAll('div');
-    pixels.forEach((div) => div.style.backgroundColor = '#000')
+    pixels.forEach((div) => div.style.backgroundColor = DefaultColor)
 })
 
 function resetGrid() {
