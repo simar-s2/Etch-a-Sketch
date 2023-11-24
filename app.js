@@ -70,4 +70,3 @@ function changeSize (input) {
 
 // Calling creategrid function for the first time
 createGrid(16);
-
