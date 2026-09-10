@@ -4,7 +4,7 @@ A browser drawing pad with a resizable grid. Move the mouse over the grid to
 paint. One of [The Odin Project](https://www.theodinproject.com/) foundations
 exercises.
 
-> 📸 **Screenshot needed**: the grid part-filled in rainbow mode, with the control buttons above it. Save to `docs/sketch.png` and replace this line with `![Etch-a-Sketch](docs/sketch.png)`.
+![Etch-a-Sketch](docs/sketch.png)
 
 ## Run it
 
